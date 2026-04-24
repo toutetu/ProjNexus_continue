@@ -1,7 +1,14 @@
-# 作業依頼：Phase 2 継続（2026-04-24）
+# 作業依頼：{{PHASE_NAME}}（{{YYYY-MM-DD}}）
+
+> **テンプレート使用方法**
+> このファイルをコピーして `next_chat_handover_{{YYYYMMDD}}.md` として保存し、
+> `{{...}}` の変数部分を埋めて使用する。
+> 毎日書き換えるのは主に「現在地」「今日やること」「今日の作業向け追加読ファイル」の3セクション。
+
+---
 
 インターンシップ開発管理アプリ（Laravel 11 + React + Inertia + TypeScript）の  
-**Phase 2 継続作業（申請・承認フロー仕上げ）** を進めてください。
+**{{PHASE_NAME}}{{PHASE_GOAL_SHORT}}** を進めてください。
 
 ---
 
@@ -25,41 +32,46 @@
 
 ## 現在地（完了済み）
 
-- 実装ブランチ: `feat/phase2-projects-foundation`（push済み）
-- 反映コミット: `b8d53971`
+- 実装ブランチ: `{{CURRENT_BRANCH}}`（{{BRANCH_STATUS}}）
+- 反映コミット: `{{LATEST_COMMIT_HASH}}`
 - 実装済み:
-  - `ApprovalDialog`（コメント付き承認/却下）
-  - `Projects/Create.tsx`（`projects.store` 接続）
-  - `Projects/Edit.tsx`（`projects.update` 接続）
-  - 一覧→詳細→編集導線
-  - `canEdit` 連動表示（一覧/詳細）
-  - 行単位の二重送信防止（processing ロック + スピナー）
+  - {{DONE_ITEM_1}}
+  - {{DONE_ITEM_2}}
+  - {{DONE_ITEM_3}}
+  <!-- 必要な分だけ追加 -->
 
 ---
 
 ## 今日やること（優先順）
 
-1. `Notifications/Index.tsx`（S-12）を最小実装
-2. ヘッダー未読バッジを最小接続
-3. 承認待ち一覧UIの調整（状態表示/エラー表示）
-4. 3ロールで申請→承認/却下→通知を手動確認
-5. 余裕があれば Feature テスト着手（承認1本、権限1本）
+1. {{TODAY_TASK_1}}
+2. {{TODAY_TASK_2}}
+3. {{TODAY_TASK_3}}
+4. {{TODAY_TASK_4}}
+5. 余裕があれば {{OPTIONAL_TASK}}
 
 ---
 
 ## 作業前に読むファイル
 
-### 共通（毎回必読）
+### 共通（毎回必読・固定）
 - `doc/Design/AI.md` — プロジェクト全体ルール
 - `doc/daily/intern_schedule.md` — 現在の進捗・Phase 状態
 - `doc/daily/implementation_schedule.md` §3 — 次回作業予定
 - `doc/daily/log/implementation_schedule_log.md` — 前日の詳細ログ
 
-### 今日の作業向け（S-12 通知 / UI 調整）
-- `doc/Design/components_spec.md` — 共通コンポーネントの Props・配置（Pages 実装前に必読）
-- `doc/Design/screen_flow.md` — S-12 通知一覧の URL・画面遷移
-- `doc/Design/design_system.md` — バッジ・色・スタイル
-- `routes/web.php` — 通知ルートの追加箇所
+### 今日の作業向け（日によって変える）
+<!--
+以下は参考リスト。今日の作業内容に応じて必要なものだけ残す。
+
+- Pages / UI 作業 → components_spec.md、design_system.md、screen_flow.md
+- DB / migration 作業 → er_diagram.md、requirements.md
+- 承認フロー関連 → design-philosophy.md §4（承認フロー設計）
+- ルーティング追加 → routes/web.php、screen_flow.md §2
+-->
+- `{{READ_FILE_1}}` — {{READ_FILE_1_REASON}}
+- `{{READ_FILE_2}}` — {{READ_FILE_2_REASON}}
+- `{{READ_FILE_3}}` — {{READ_FILE_3_REASON}}
 
 ---
 
@@ -69,3 +81,5 @@
 - `npm run build` 成功
 - 実装コミット・push完了
 - `doc/daily/` の日次更新完了（docsブランチで分離）
+- {{ADDITIONAL_COMPLETION_CRITERIA}}
+<!-- 追加の完了条件がなければこの行は削除 -->
