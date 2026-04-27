@@ -1,6 +1,7 @@
 import { Link, usePage } from '@inertiajs/react';
 import { Bell, Search } from 'lucide-react';
 
+import Challenge2Badge from '@/Components/Badge/Challenge2Badge';
 import Breadcrumb from '@/Components/Layout/Breadcrumb';
 import type { BreadcrumbItem, PageProps } from '@/types';
 
@@ -18,11 +19,12 @@ export default function Header({ breadcrumb }: HeaderProps) {
             <div className="flex items-center gap-3">
                 <button
                     type="button"
-                    className="flex items-center gap-2 rounded-md border border-jpt-border px-3 py-1.5 text-sm transition-colors hover:bg-jpt-bg focus:outline-none focus:ring-2 focus:ring-jpt-blue/40"
+                    className="flex items-center gap-2 rounded-md border border-[#DEE2E6] bg-[#F1F3F5] px-3 py-1.5 text-sm transition-colors hover:bg-[#E9ECEF] focus:outline-none focus:ring-2 focus:ring-jpt-blue/40"
                     aria-label="検索（⌘K）"
                 >
                     <Search className="h-4 w-4 text-jpt-muted" />
-                    <span className="text-jpt-muted">検索...</span>
+                    <span className="text-jpt-muted">検索</span>
+                    <Challenge2Badge />
                     <span className="rounded border border-[#CED4DA] bg-[#E9ECEF] px-1.5 py-0.5 font-mono text-[11px] text-[#495057]">
                         ⌘K
                     </span>
