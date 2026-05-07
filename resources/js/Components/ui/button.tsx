@@ -17,6 +17,8 @@ const buttonVariants = cva(
                     'border border-jpt-red bg-white text-jpt-red hover:bg-jpt-red/5',
                 secondary:
                     'border border-jpt-border bg-white text-jpt-dark shadow-sm hover:bg-jpt-bg',
+                neutral:
+                    'border border-slate-300 bg-white text-jpt-muted shadow-sm hover:bg-slate-100 hover:text-jpt-dark',
                 ghost: 'text-jpt-blue hover:bg-jpt-bg',
                 link: 'text-jpt-blue underline-offset-4 hover:underline',
             },
