@@ -31,4 +31,7 @@ Thumbs.db
 # ローカルで再利用するユーティリティ（リポジトリには含めない）
 /scripts/
 materials/quest/2026年10月採用 Web課題 (1).pdf
+materials/quest/2026年10月採用説明会 (note掲載用) (1).pdf
 materials/quest/インターンシップ最初の流れ.pdf
+# ローカル用コピー（コミットしない）
+materials/presentation_drafts/* - コピー.*
