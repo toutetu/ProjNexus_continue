@@ -123,8 +123,8 @@ class DashboardController extends Controller
 
         if ($user->hasRole(Role::HqManager->value)) {
             $rows = (clone $base)
-                ->selectRaw('departments.name as name, AVG(tasks.progress_rate) as rate')
-                ->groupBy('departments.name')
+                ->selectRaw('departments.id as department_id, departments.name as name, AVG(tasks.progress_rate) as rate')
+                ->groupBy('departments.id', 'departments.name')
                 ->orderBy('departments.id')
                 ->get();
 
